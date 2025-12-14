@@ -1,69 +1,28 @@
 const Home = () => {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.heading}>
+    <div className="min-h-[calc(100vh-64px)] flex flex-col justify-center items-center text-center px-5">
+      
+      <h1 className="text-4xl font-bold mb-3">
         Discover Local Businesses in Nashik
       </h1>
 
-      <p style={styles.subtext}>
+      <p className="text-gray-500 text-base mb-7 max-w-xl">
         Find grocery stores, medical shops, salons, and agriculture essentials near you.
       </p>
 
-      <div style={styles.searchBox}>
+      <div className="flex w-full max-w-xl">
         <input
           type="text"
           placeholder="Search for shops, services, or categories..."
-          style={styles.input}
+          className="flex-1 px-4 py-3 text-base border border-gray-300 rounded-l-md outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <button style={styles.searchBtn}>Search</button>
+        <button className="px-6 py-3 bg-blue-600 text-white text-base rounded-r-md hover:bg-blue-700 transition">
+          Search
+        </button>
       </div>
+
     </div>
   );
-};
-
-const styles = {
-  container: {
-    minHeight: "calc(100vh - 64px)",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    padding: "20px",
-  },
-  heading: {
-    fontSize: "36px",
-    fontWeight: "700",
-    marginBottom: "12px",
-  },
-  subtext: {
-    fontSize: "16px",
-    color: "#6b7280",
-    marginBottom: "28px",
-    maxWidth: "600px",
-  },
-  searchBox: {
-    display: "flex",
-    width: "100%",
-    maxWidth: "520px",
-  },
-  input: {
-    flex: 1,
-    padding: "12px",
-    fontSize: "16px",
-    border: "1px solid #d1d5db",
-    borderRadius: "6px 0 0 6px",
-    outline: "none",
-  },
-  searchBtn: {
-    padding: "12px 20px",
-    border: "none",
-    backgroundColor: "#2563eb",
-    color: "#ffffff",
-    fontSize: "16px",
-    borderRadius: "0 6px 6px 0",
-    cursor: "pointer",
-  },
 };
 
 export default Home;
